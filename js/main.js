@@ -93,14 +93,15 @@ if (orderForm) {
   orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
     
-    const phoneNumber = "525500000000"; // Sustituye por tu número real con clave de país
+    const phoneNumber = "525550677316"; // Sustituye por tu número real con clave de país
+    const clientName = document.getElementById("clientName").value.trim();
     const itemSource = document.querySelector('input[name="itemSource"]:checked').value;
     const itemType = document.getElementById("itemType").value;
     const itemSize = document.getElementById("itemSize").value;
-    const itemColor = document.getElementById("itemColor").value;
-    const designIdea = document.getElementById("designIdea").value;
+    const itemColor = document.getElementById("itemColor").value.trim();
+    const designIdea = document.getElementById("designIdea").value.trim();
 
-    const message = `¡Hola! Quisiera cotizar un pedido en mami't stamp:%0A%0A` +
+    const message = `Hola Consu, soy ${clientName} y quisiera cotizar un pedido en mami't stamp:%0A%0A` +
       `*1. Prenda/Objeto:* ${itemSource}%0A` +
       `*2. Producto:* ${itemType}%0A` +
       `*3. Talla:* ${itemSize}%0A` +

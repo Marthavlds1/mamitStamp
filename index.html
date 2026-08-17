@@ -93,6 +93,12 @@
       <p class="order__subtitle">Cuéntanos tu idea y te cotizamos al instante</p>
 
       <form class="order__form" id="orderForm">
+        <!-- Campo Nombre -->
+        <div class="order__group">
+          <label class="order__label" for="clientName">Tu Nombre</label>
+          <input type="text" class="order__input" id="clientName" placeholder="Ej: María José" required>
+        </div>
+
         <!-- Paso 1: Origen de la prenda -->
         <div class="order__group">
           <label class="order__label">1. ¿De quién es la prenda u objeto?</label>
@@ -152,6 +158,16 @@
         <button type="submit" class="order__submit">ENVIAR A WHATSAPP ↓</button>
       </form>
     </section>
+ 
+
+
+          <div class="order__group">
+            <label class="order__label" for="itemSize">3. Talla</label>
+            <select class="order__select" id="itemSize">
+              <option value="S">Chica (S)</option>
+              <option value="M">Mediana (M)</option>
+              <option value="L">Grande (L)</option>
+   
 
   <!-- FOOTER -->
   <footer class="footer">
