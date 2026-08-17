@@ -3,17 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mami't stamp — Inicio</title>
+  <title>La Diseñadora — mami't stamp</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- SPLASH SCREEN -->
-  <div class="splash" id="splash">
-    <h1 class="splash__title">mami't stamp</h1>
-    <p class="splash__by">por Consuelo Valdés</p>
-  </div>
-
-  <!-- NAVBAR -->
   <nav class="navbar">
     <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
@@ -27,22 +20,22 @@
     </div>
   </nav>
 
-  <main id="app">
-    <!-- HERO SECTION -->
-    <section class="hero" id="hero">
-      <h1 class="hero__title">mami't stamp</h1>
-      <p class="hero__tagline">por Consuelo Valdes Cruz — CDMX</p>
-      <a href="pedido.html" class="about__cta" style="margin-top: 2rem;">EMPEZAR PEDIDO</a>
-      <span class="hero__scroll">↓ scroll</span>
+  <main id="app" style="padding-top: 5rem;">
+    <section class="designer">
+      <img src="assets/img/consuelo.jpg" alt="Consuelo Valdés" class="designer__photo">
+      <h2 class="designer__name">Consuelo Valdés</h2>
+      <p class="designer__role">diseñadora & fundadora</p>
+      <p class="designer__bio">
+        Diseñadora independiente en CDMX. Transformo ideas, conceptos e ilustraciones visuales en estampados textiles de alta calidad con un enfoque underground y personalizado.
+      </p>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <p class="footer__copy">mami't stamp — CDMX © 2026</p>
   </footer>
 
-  <!-- LIBRERÍAS GSAP + SCROLLTRIGGER -->
+  <!-- LIBRERÍAS GSAP Y SCROLLTRIGGER NECESARIAS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script type="module" src="js/main.js"></script>

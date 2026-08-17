@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* VARIABLES GLOBALES */
+/* ==========================================
+   1. VARIABLES Y RESET GLOBAL
+   ========================================== */
 :root {
-  --bg: #dbd1ca;
+  --bg: #ddd6d6;
   --surface: #665d5d;
   --text: #1a1a1a;
   --accent: #e63946;
@@ -10,7 +12,6 @@
   --font-body: 'Space Mono', monospace, sans-serif;
 }
 
-/* RESET GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +29,9 @@ body {
   overflow-x: hidden;
 }
 
-/* SPLASH SCREEN */
+/* ==========================================
+   2. SPLASH SCREEN
+   ========================================== */
 .splash {
   position: fixed;
   inset: 0;
@@ -52,30 +55,47 @@ body {
   opacity: 0.8;
 }
 
-/* NAVBAR */
+/* ==========================================
+   3. NAVBAR (Navegación)
+   ========================================== */
 .navbar {
   position: fixed;
   top: 1.5rem;
-  left: 1.5rem; /* Se cambia 'right' por 'left' para mover el botón al lado izquierdo */
-  right: auto;  /* Asegura que no quede estirada */
-  z-index: 1000;
+  left: 1.5rem;
+  z-index: 10000;
 }
 
 .navbar__toggle {
-  background: transparent;
+  background: #1a1a1a;
   border: none;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 4px;
+  position: relative;
+  z-index: 10001;
 }
 
 .navbar__toggle span {
   display: block;
-  width: 28px;
-  height: 3px;
-  background-color: var(--text);
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar__toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .navbar__menu {
@@ -87,11 +107,16 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(-100%);
-  transition: transform 0.4s ease-in-out;
+  z-index: 9999;
 }
 
 .navbar__menu.is-open {
+  opacity: 1;
+  pointer-events: all;
   transform: translateY(0);
 }
 
@@ -99,8 +124,13 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--accent);
 }
 
 .navbar__link--cta {
@@ -118,7 +148,9 @@ body {
   text-decoration: none;
 }
 
-/* HERO SECTION */
+/* ==========================================
+   4. HERO SECTION
+   ========================================== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -127,6 +159,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 2rem;
+  position: relative;
 }
 
 .hero__title {
@@ -147,7 +180,9 @@ body {
   font-size: 0.9rem;
 }
 
-/* ABOUT SECTION */
+/* ==========================================
+   5. ABOUT SECTION
+   ========================================== */
 .about {
   min-height: 80vh;
   padding: 4rem 2rem;
@@ -187,7 +222,9 @@ body {
   font-size: 1.2rem;
 }
 
-/* DESIGNER SECTION */
+/* ==========================================
+   6. DESIGNER SECTION
+   ========================================== */
 .designer {
   min-height: 80vh;
   padding: 4rem 2rem;
@@ -222,7 +259,9 @@ body {
   line-height: 1.6;
 }
 
-/* PORTFOLIO SECTION */
+/* ==========================================
+   7. PORTFOLIO SECTION
+   ========================================== */
 .portfolio {
   padding: 4rem 2rem;
   text-align: center;
@@ -248,7 +287,9 @@ body {
   object-fit: cover;
 }
 
-/* ORDER SECTION */
+/* ==========================================
+   8. ORDER SECTION (Formulario)
+   ========================================== */
 .order {
   min-height: 80vh;
   padding: 4rem 1.5rem;
@@ -378,7 +419,9 @@ body {
   background: #d32f2f;
 }
 
-/* FOOTER */
+/* ==========================================
+   9. FOOTER
+   ========================================== */
 .footer {
   padding: 3rem 1.5rem;
   display: flex;

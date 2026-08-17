@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empezar Pedido — mami't stamp</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="navbar__menu" id="navMenu">
+      <a href="index.html" class="navbar__link">Inicio</a>
+      <a href="quienes-somos.html" class="navbar__link">Qué hacemos</a>
+      <a href="disenadora.html" class="navbar__link">La diseñadora</a>
+      <a href="portafolio.html" class="navbar__link">Portafolio</a>
+      <a href="pedido.html" class="navbar__link navbar__link--cta">Empezar pedido</a>
+    </div>
+  </nav>
+
+  <main id="app" style="padding-top: 5rem;">
+    <section class="order">
+      <h2 class="order__title">Empieza tu pedido</h2>
+      <p class="order__subtitle">Cuéntanos tu idea y te cotizamos al instante</p>
+
+      <form class="order__form" id="orderForm">
+        <div class="order__group">
+          <label class="order__label" for="clientName">Tu Nombre</label>
+          <input type="text" class="order__input" id="clientName" placeholder="Ej: María José" required>
+        </div>
+
+        <div class="order__group">
+          <label class="order__label">1. ¿De quién es la prenda u objeto?</label>
+          <div class="order__options">
+            <label class="order__radio">
+              <input type="radio" name="itemSource" value="El cliente pone la prenda" checked>
+              <span>Yo pongo la prenda / objeto</span>
+            </label>
+            <label class="order__radio">
+              <input type="radio" name="itemSource" value="mami't stamp pone la prenda">
+              <span>Va por cuenta de mami't stamp</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="order__grid-fields">
+          <div class="order__group">
+            <label class="order__label" for="itemType">2. Producto</label>
+            <select class="order__select" id="itemType">
+              <option value="Playera">Playera</option>
+              <option value="Sudadera / Hoodie">Sudadera / Hoodie</option>
+              <option value="Tote Bag">Tote Bag</option>
+              <option value="Otro / No corresponde">Otro / No corresponde</option>
+            </select>
+          </div>
+
+          <div class="order__group">
+            <label class="order__label" for="itemSize">3. Talla</label>
+            <select class="order__select" id="itemSize">
+              <option value="Chica (S)">Chica (S)</option>
+              <option value="Mediana (M)" selected>Mediana (M)</option>
+              <option value="Grande (L)">Grande (L)</option>
+              <option value="Extra Grande (XL)">Extra Grande (XL)</option>
+              <option value="No aplica / No corresponde">No aplica / No corresponde</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="order__group">
+          <label class="order__label" for="itemColor">4. Color preferido de prenda</label>
+          <input type="text" class="order__input" id="itemColor" placeholder="Ej: Negro, Blanco, Jaspe, Indistinto..." required>
+        </div>
+
+        <div class="order__group">
+          <label class="order__label" for="designIdea">5. Describe tu idea o concepto</label>
+          <textarea class="order__textarea" id="designIdea" rows="3" placeholder="Ejemplo: Quiero un estampado centrado en el pecho estilo retro con tintas opacas..." required></textarea>
+        </div>
+
+        <div class="order__file-note">
+          <span>💡 <strong>¿Tienes fotos de referencia?</strong> Podrás adjuntarlas directamente en el chat de WhatsApp al abrirse la conversación.</span>
+        </div>
+
+        <button type="submit" class="order__submit">ENVIAR A WHATSAPP ↓</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copy">mami't stamp — CDMX © 2026</p>
+  </footer>
+
+  <!-- LIBRERÍAS GSAP Y SCROLLTRIGGER NECESARIAS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
