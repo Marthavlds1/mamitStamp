@@ -93,7 +93,7 @@
       <p class="order__subtitle">Cuéntanos tu idea y te cotizamos al instante</p>
 
       <form class="order__form" id="orderForm">
-        <!-- Paso 1: Tipo de Prenda -->
+        <!-- Paso 1: Origen de la prenda -->
         <div class="order__group">
           <label class="order__label">1. ¿De quién es la prenda u objeto?</label>
           <div class="order__options">
@@ -108,23 +108,55 @@
           </div>
         </div>
 
-        <!-- Paso 2: Detalles del diseño -->
+        <!-- Paso 2: Especificaciones del producto -->
+        <div class="order__grid-fields">
+          <div class="order__group">
+            <label class="order__label" for="itemType">2. Producto</label>
+            <select class="order__select" id="itemType">
+              <option value="Playera">Playera</option>
+              <option value="Sudadera / Hoodie">Sudadera / Hoodie</option>
+              <option value="Tote Bag">Tote Bag</option>
+              <option value="Otro / No corresponde">Otro / No corresponde</option>
+            </select>
+          </div>
+
+          <div class="order__group">
+            <label class="order__label" for="itemSize">3. Talla</label>
+            <select class="order__select" id="itemSize">
+              <option value="S">Chica (S)</option>
+              <option value="M">Mediana (M)</option>
+              <option value="L">Grande (L)</option>
+              <option value="XL">Extra Grande (XL)</option>
+              <option value="No aplica / No corresponde">No aplica / No corresponde</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Paso 3: Color -->
         <div class="order__group">
-          <label class="order__label" for="designIdea">2. Describe tu idea o concepto</label>
-          <textarea class="order__textarea" id="designIdea" rows="4" placeholder="Ejemplo: Quiero una playera negra con un estampado en el pecho estilo retro, colores opacos..." required></textarea>
+          <label class="order__label" for="itemColor">4. Color preferido de prenda</label>
+          <input type="text" class="order__input" id="itemColor" placeholder="Ej: Negro, Blanco, Jaspe, Indistinto..." required>
+        </div>
+
+        <!-- Paso 4: Idea/Concepto -->
+        <div class="order__group">
+          <label class="order__label" for="designIdea">5. Describe tu idea o concepto</label>
+          <textarea class="order__textarea" id="designIdea" rows="3" placeholder="Ejemplo: Quiero un estampado centrado en el pecho estilo retro con tintas opacas..." required></textarea>
+        </div>
+
+        <!-- Paso 5: Nota sobre imágenes -->
+        <div class="order__file-note">
+          <span>💡 <strong>¿Tienes fotos de referencia?</strong> Podrás adjuntarlas directamente en el chat de WhatsApp al abrirse la conversación.</span>
         </div>
 
         <button type="submit" class="order__submit">ENVIAR A WHATSAPP ↓</button>
       </form>
     </section>
 
-  </main>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__social">
       <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
       <a href="https://wa.me/525500000000" target="_blank" rel="noopener">WhatsApp</a>
     </div>
     <p class="footer__copy">mami't stamp — CDMX © 2026</p>

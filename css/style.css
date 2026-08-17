@@ -362,6 +362,7 @@ button, a {
 }
 
 /* ORDER SECTION */
+/* ORDER SECTION */
 .order {
   min-height: 80vh;
   padding: 4rem 1.5rem;
@@ -390,26 +391,38 @@ button, a {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
 .order__group {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.5rem;
+}
+
+.order__grid-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  .order__grid-fields {
+    grid-template-columns: 1fr;
+  }
 }
 
 .order__label {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--accent);
 }
 
 .order__options {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.6rem;
 }
 
 .order__radio {
@@ -417,22 +430,33 @@ button, a {
   align-items: center;
   gap: 0.8rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
+.order__input,
+.order__select,
 .order__textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
   background: var(--surface);
   border: 1px solid rgba(242, 242, 240, 0.2);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  resize: vertical;
+  font-size: 0.85rem;
 }
 
+.order__input:focus,
+.order__select:focus,
 .order__textarea:focus {
   outline: 1px solid var(--accent);
+}
+
+.order__file-note {
+  background: rgba(230, 57, 70, 0.1);
+  border-left: 3px solid var(--accent);
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
 
 .order__submit {
@@ -445,6 +469,7 @@ button, a {
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
+  margin-top: 0.5rem;
 }
 
 .order__submit:hover {

@@ -93,13 +93,19 @@ if (orderForm) {
   orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
     
-    const phoneNumber = "525550677316"; // Reemplaza con tu número de WhatsApp
+    const phoneNumber = "525500000000"; // Sustituye por tu número real con clave de país
     const itemSource = document.querySelector('input[name="itemSource"]:checked').value;
+    const itemType = document.getElementById("itemType").value;
+    const itemSize = document.getElementById("itemSize").value;
+    const itemColor = document.getElementById("itemColor").value;
     const designIdea = document.getElementById("designIdea").value;
 
     const message = `¡Hola! Quisiera cotizar un pedido en mami't stamp:%0A%0A` +
       `*1. Prenda/Objeto:* ${itemSource}%0A` +
-      `*2. Idea del diseño:* ${designIdea}`;
+      `*2. Producto:* ${itemType}%0A` +
+      `*3. Talla:* ${itemSize}%0A` +
+      `*4. Color:* ${itemColor}%0A` +
+      `*5. Idea del diseño:* ${designIdea}`;
 
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   });
