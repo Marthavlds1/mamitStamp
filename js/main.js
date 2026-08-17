@@ -85,3 +85,22 @@ sections.forEach(({ selector, elements }) => {
     }
   });
 });
+
+// LÓGICA DE ENVÍO A WHATSAPP
+const orderForm = document.getElementById("orderForm");
+
+if (orderForm) {
+  orderForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    const phoneNumber = "525550677316"; // Reemplaza con tu número de WhatsApp
+    const itemSource = document.querySelector('input[name="itemSource"]:checked').value;
+    const designIdea = document.getElementById("designIdea").value;
+
+    const message = `¡Hola! Quisiera cotizar un pedido en mami't stamp:%0A%0A` +
+      `*1. Prenda/Objeto:* ${itemSource}%0A` +
+      `*2. Idea del diseño:* ${designIdea}`;
+
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+  });
+}

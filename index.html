@@ -87,13 +87,45 @@
 
   </main>
 
+  <!-- SECCIÓN INTERACTIVA DE PEDIDO -->
+    <section class="order" id="pedido">
+      <h2 class="order__title">Empieza tu pedido</h2>
+      <p class="order__subtitle">Cuéntanos tu idea y te cotizamos al instante</p>
+
+      <form class="order__form" id="orderForm">
+        <!-- Paso 1: Tipo de Prenda -->
+        <div class="order__group">
+          <label class="order__label">1. ¿De quién es la prenda u objeto?</label>
+          <div class="order__options">
+            <label class="order__radio">
+              <input type="radio" name="itemSource" value="El cliente pone la prenda" checked>
+              <span>Yo pongo la prenda / objeto</span>
+            </label>
+            <label class="order__radio">
+              <input type="radio" name="itemSource" value="mami't stamp pone la prenda">
+              <span>Va por cuenta de mami't stamp</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Paso 2: Detalles del diseño -->
+        <div class="order__group">
+          <label class="order__label" for="designIdea">2. Describe tu idea o concepto</label>
+          <textarea class="order__textarea" id="designIdea" rows="4" placeholder="Ejemplo: Quiero una playera negra con un estampado en el pecho estilo retro, colores opacos..." required></textarea>
+        </div>
+
+        <button type="submit" class="order__submit">ENVIAR A WHATSAPP ↓</button>
+      </form>
+    </section>
+
+  </main>
+
   <!-- FOOTER -->
-  <footer class="footer" id="pedido">
-    <a href="#" class="footer__cta">EMPEZAR PEDIDO</a>
+  <footer class="footer">
     <div class="footer__social">
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">TikTok</a>
-      <a href="#" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://wa.me/525500000000" target="_blank" rel="noopener">WhatsApp</a>
     </div>
     <p class="footer__copy">mami't stamp — CDMX © 2026</p>
   </footer>
