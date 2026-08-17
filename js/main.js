@@ -101,7 +101,7 @@ if (orderForm) {
     const itemColor = document.getElementById("itemColor").value.trim();
     const designIdea = document.getElementById("designIdea").value.trim();
 
-    const message = `Hola Consu, soy ${clientName} y quisiera cotizar un pedido en mami't stamp:%0A%0A` +
+    const message = `Hola Consu, soy ${clientName} y quisiera cotizar un pedido en Mami't Stamp:%0A%0A` +
       `*1. Prenda/Objeto:* ${itemSource}%0A` +
       `*2. Producto:* ${itemType}%0A` +
       `*3. Talla:* ${itemSize}%0A` +
