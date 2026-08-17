@@ -7,14 +7,98 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  
+  <!-- SPLASH SCREEN -->
+  <div class="splash" id="splash">
+    <h1 class="splash__title">mami't stamp</h1>
+    <p class="splash__by">por Consuelo Valdés</p>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar__menu" id="navMenu">
+      <a href="#hero" class="navbar__link">Inicio</a>
+      <a href="#about" class="navbar__link">Qué hacemos</a>
+      <a href="#designer" class="navbar__link">La diseñadora</a>
+      <a href="#portfolio" class="navbar__link">Portafolio</a>
+      <a href="#pedido" class="navbar__link navbar__link--cta">Empezar pedido</a>
+      <div class="navbar__social">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">TikTok</a>
+        <a href="#" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
   <main id="app">
-    <section class="hero">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
       <h1 class="hero__title">mami't stamp</h1>
       <p class="hero__tagline">por Consuelo Valdes Cruz — CDMX</p>
       <span class="hero__scroll">↓ scroll</span>
     </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+      <p class="about__text">
+        estampamos tus diseños y tu trabajo.<br>
+        diseños personalizados.
+      </p>
+
+      <div class="about__grid">
+        <img src="assets/img/placeholder1.jpg" alt="trabajo 1">
+        <img src="assets/img/placeholder2.jpg" alt="trabajo 2">
+        <img src="assets/img/placeholder3.jpg" alt="trabajo 3">
+      </div>
+
+      <a href="#pedido" class="about__cta">EMPEZAR PEDIDO</a>
+    </section>
+
+    <!-- DESIGNER SECTION -->
+    <section class="designer" id="designer">
+      <img src="assets/img/consuelo.jpg" alt="Consuelo Valdés" class="designer__photo">
+      <h2 class="designer__name">Consuelo Valdés</h2>
+      <p class="designer__role">diseñadora & fundadora</p>
+      <p class="designer__bio">
+        Diseñadora independiente en CDMX. Transformo ideas, conceptos e ilustraciones visuales en estampados textiles de alta calidad con un enfoque underground y personalizado.
+      </p>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="portfolio__title">Portafolio</h2>
+      <div class="portfolio__grid">
+        <img src="assets/img/trabajo1.jpg" alt="trabajo 1">
+        <img src="assets/img/trabajo2.jpg" alt="trabajo 2">
+        <img src="assets/img/trabajo3.jpg" alt="trabajo 3">
+        <img src="assets/img/trabajo4.jpg" alt="trabajo 4">
+        <img src="assets/img/trabajo5.jpg" alt="trabajo 5">
+        <img src="assets/img/trabajo6.jpg" alt="trabajo 6">
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
+  <footer class="footer" id="pedido">
+    <a href="#" class="footer__cta">EMPEZAR PEDIDO</a>
+    <div class="footer__social">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">TikTok</a>
+      <a href="#" target="_blank">WhatsApp</a>
+    </div>
+    <p class="footer__copy">mami't stamp — CDMX © 2026</p>
+  </footer>
+
+  <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script type="module" src="js/main.js"></script>
