@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// ===== TIMELINE DE LA HERO SECTION =====
+// TIMELINE DE LA HERO SECTION
 const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
 
 tl.from(".hero__title", { scale: 1.4, opacity: 0, duration: 0.8 })
@@ -11,17 +11,19 @@ tl.from(".hero__title", { scale: 1.4, opacity: 0, duration: 0.8 })
 const splash = document.getElementById("splash");
 
 window.addEventListener("load", () => {
-  gsap.to(splash, {
-    opacity: 0,
-    duration: 0.8,
-    delay: 2,
-    ease: "power2.inOut",
-    onComplete: () => {
-      splash.style.display = "none";
-      tl.play();
-      ScrollTrigger.refresh(); // Recalcula posiciones exactas de cada sección
-    },
-  });
+  if (splash) {
+    gsap.to(splash, {
+      opacity: 0,
+      duration: 0.8,
+      delay: 2,
+      ease: "power2.inOut",
+      onComplete: () => {
+        splash.style.display = "none";
+        tl.play();
+        ScrollTrigger.refresh();
+      },
+    });
+  }
 });
 
 // Loop del indicador de scroll
@@ -45,7 +47,7 @@ if (navToggle && navMenu) {
   );
 }
 
-// ===== ANIMACIONES INDEPENDIENTES POR SECCIÓN =====
+// ANIMACIONES INDEPENDIENTES POR SECCIÓN
 const sections = [
   {
     selector: ".about",
@@ -57,11 +59,15 @@ const sections = [
   },
   {
     selector: ".portfolio",
-    elements: ".portfolio__title, .portfolio__grid img" // Anima cada imagen individualmente
+    elements: ".portfolio__title, .portfolio__grid img"
+  },
+  {
+    selector: ".order",
+    elements: ".order__title, .order__subtitle, .order__form"
   },
   {
     selector: ".footer",
-    elements: ".footer__cta, .footer__social, .footer__copy"
+    elements: ".footer__social, .footer__copy"
   }
 ];
 
@@ -80,7 +86,7 @@ sections.forEach(({ selector, elements }) => {
     ease: "power3.out",
     scrollTrigger: {
       trigger: container,
-      start: "top 80%", // Se activa únicamente cuando esta sección específica entra al viewport
+      start: "top 80%",
       toggleActions: "play none none none"
     }
   });
@@ -101,7 +107,7 @@ if (orderForm) {
     const itemColor = document.getElementById("itemColor").value.trim();
     const designIdea = document.getElementById("designIdea").value.trim();
 
-    const message = `Hola Consu, soy ${clientName} y quisiera cotizar un pedido en Mami't Stamp:%0A%0A` +
+    const message = `Hola Consu, soy ${clientName} y quisiera cotizar un pedido en mami't stamp:%0A%0A` +
       `*1. Prenda/Objeto:* ${itemSource}%0A` +
       `*2. Producto:* ${itemType}%0A` +
       `*3. Talla:* ${itemSize}%0A` +
